@@ -21,12 +21,12 @@ function Diary({ id, topic, image, createdAt, likes }: postProps) {
   return (
     <Link
       key={id}
-      className="aspect-w-5/3 w-[33%] rounded-2xl p-2 transition-colors hover:bg-white/50"
+      className="rounded-2xl p-2 transition-colors hover:bg-white/50"
       href={{
         pathname: `personal/${String(id)}`,
       }}
     >
-      <div className="h-full rounded-2xl border-2 border-solid border-[#7C5A16] bg-white">
+      <div className="relative aspect-[4/3] rounded-2xl border-2 border-solid border-[#7C5A16] bg-white">
         <div className="flex h-4/5 items-center justify-center">
           <Image
             src={image}
@@ -36,7 +36,8 @@ function Diary({ id, topic, image, createdAt, likes }: postProps) {
             className="h-2/3 w-2/3 rounded-2xl"
           />
         </div>
-        <div className="flex h-1/5 items-center justify-center gap-4 rounded-b-2xl bg-[#F2D7A3] text-base font-bold">
+
+        <div className="flex h-1/5 px-2 items-center justify-center gap-2 lg:gap-4 rounded-b-2xl bg-[#F2D7A3] text-xs lg:text-sm font-bold">
           <div>{formattedDate}</div>
           <div className="flex items-center">
             <div>

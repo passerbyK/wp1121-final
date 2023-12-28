@@ -38,7 +38,7 @@ function SignUp() {
   };
 
   return (
-    <div className="relative z-50 flex min-h-screen items-center justify-center bg-brand">
+    <div className="relative flex min-h-screen items-center justify-center bg-brand">
       <Card className="w-4/5 border-4 border-bdr bg-brand md:w-[600px] lg:w-[800px]">
         <CardHeader>
           <CardTitle className="flex items-center justify-between text-4xl">
@@ -48,8 +48,8 @@ function SignUp() {
                   src="/Logo_new.png"
                   alt="Souly Logo"
                   className="mr-2 w-full"
-                  width={20}
-                  height={20}
+                  width={100}
+                  height={100}
                 />
               </div>
             </Link>

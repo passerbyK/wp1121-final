@@ -27,8 +27,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poetsenOne.className}`}>
         <SessionProvider>
-          <Header />
-          {children}
+          <div className="h-screen w-full">
+          <div className="h-1/6 w-full"><Header /></div>
+          <div className="h-5/6 w-full">{children}</div>
+          </div>
         </SessionProvider>
       </body>
     </html>

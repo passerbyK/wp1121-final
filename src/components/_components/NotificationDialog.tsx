@@ -128,8 +128,8 @@ async function NotificationDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="cursor-pointer p-2 px-4 text-3xl text-description transition-colors hover:rounded-full hover:bg-description/30">
-          <IoNotifications />
+        <Button className="cursor-pointer px-2 sm:px-4 text-description transition-colors hover:rounded-full hover:bg-description/30">
+          <IoNotifications className="text-3xl sm:text-4xl"/>
         </Button>
       </DialogTrigger>
       <DialogContent>

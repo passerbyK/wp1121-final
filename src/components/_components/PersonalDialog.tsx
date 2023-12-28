@@ -22,8 +22,8 @@ async function PersonalDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="cursor-pointer p-2 px-4 text-5xl text-description transition-colors hover:text-description/80">
-          <IoPersonCircleSharp />
+        <Button className="cursor-pointer px-2 sm:px-4 text-description transition-colors hover:text-description/80">
+          <IoPersonCircleSharp className="text-3xl sm:text-4xl"/>
         </Button>
       </DialogTrigger>
       <DialogContent>

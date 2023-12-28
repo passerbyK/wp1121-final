@@ -31,7 +31,6 @@ function Calendar({ startDay, endDay, successDays }: CalendarProps) {
   });
 
   const today = new Date();
-  today.setUTCHours(0, 0, 0, 0);
   const failsDays = [];
   for (
     let currentDay = new Date(startDay);
@@ -52,14 +51,10 @@ function Calendar({ startDay, endDay, successDays }: CalendarProps) {
       <style>
         {`
           .rdp {
-            --rdp-cell-size: 40px;
+            --rdp-cell-size: 20px;
           }
           .rdp-day {
             margin: 3px;
-            margin-top: 6px;
-          }
-          .rdp-day span {
-            font-size: 20px; /* Adjust the font size as needed */
           }
 
         `}

@@ -28,8 +28,9 @@ function DiaryBig({
     ${createdAt.getDate().toString().padStart(2, "0")} 
     (${daysOfWeek[createdAt.getDay()]})`;
   return (
-    <div className="flex w-full gap-2">
-      <div className="h-full w-full rounded-2xl border-2 border-solid border-[#7C5A16] bg-white">
+    <div className="lg:flex w-full gap-2">
+      <div className="lg:hidden w-full mb-4 flex justify-center text-xl sm:text-3xl">{formattedDate}</div>
+      <div className="relative aspect-[4/3] rounded-2xl border-2 border-solid border-[#7C5A16] bg-white">
         <div className="h-4/5">
           <div className="flex h-[90%] items-center justify-center">
             <Image
@@ -40,13 +41,13 @@ function DiaryBig({
               className="h-[90%] w-[70%] rounded-2xl"
             />
           </div>
-          <div className="flex w-full items-center justify-center text-2xl text-[#998D73]">
+          <div className="flex w-full items-center justify-center text-base sm:text-2xl text-[#998D73]">
             {description}
           </div>
         </div>
-        <div className="flex h-1/5 items-center justify-center gap-8 rounded-b-2xl bg-[#F2D7A3] text-3xl font-bold">
+        <div className="flex h-1/5 items-center justify-center gap-8 rounded-b-2xl bg-[#F2D7A3] text-base sm:text-2xl font-bold">
           <div className="rounded-2xl bg-description/60 p-2 px-4">{topic}</div>
-          <div>{formattedDate}</div>
+          <div className="hidden lg:block">{formattedDate}</div>
           <div className="flex items-center">
             <div>
               <HeartDialog likeslist={likeslist} />
